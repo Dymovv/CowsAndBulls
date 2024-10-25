@@ -6,9 +6,8 @@ compnumber = random.choice([num for num in range(100,10000) if len(set(str(num))
 if compnumber < 1000:
   compnumber = '0'+str(compnumber)        # добавление 0 в начало 3-значных чисел
 
-flag = True
 
-while flag:
+while True:
   player_move = int(input('Введите число: '))
   if player_move < 1000:
     player_move = '0'+str(player_move)        # добавление 0 в начало 3-значных чисел
