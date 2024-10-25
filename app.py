@@ -10,10 +10,12 @@ flag = True
 
 while flag:
   player_move = int(input('Введите число: '))
+  if player_move < 1000:
+    player_move = '0'+str(player_move)        # добавление 0 в начало 3-значных чисел
   if (len(set(str((player_move)))) < len(str(player_move))) or (len(str(player_move)) != 4):        # проверка корректности ввода
     print('Некорректный формат ввода!')
-    continueЫЫ
-  
+    continue
+
   bulls = 0
   counter = 0
   for num in str(compnumber):                                     # проверка быков
@@ -33,7 +35,7 @@ while flag:
   if player_move == compnumber:
     print('Вы победили!')
     break
-  
-  
 
-  
+
+
+
